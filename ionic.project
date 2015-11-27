@@ -1,0 +1,12 @@
+{
+  "name": "mhc",
+  "app_id": "61cde28a",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

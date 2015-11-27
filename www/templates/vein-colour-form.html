@@ -1,0 +1,22 @@
+<ion-view view-title="2." class="app-view app-view-quiz app-view-quiz-vein">
+    <ion-content class="app-content">
+
+        <div class="bar bar-header app-quiz-header">
+          <h1 class="h1 title">What is your vein colour?</h1>
+        </div>
+		
+		<div class="app-quiz-answers list">
+			<ion-radio ng-repeat="answer in answers"
+                   ng-value="answer.vein"
+                   ng-model="formData.vein">
+	          {{ answer.vein }}
+	        </ion-radio>
+		</div>
+
+		<div class="app-quiz-btn-container">
+          <button class="button button-calm ion-ios-arrow-thin-left app-quiz-btn" ui-sref="app.form.jewellery-tone"></button>
+          <button class="button button-calm ion-ios-arrow-thin-right app-quiz-btn" ui-sref="app.form.eye-colour"></button>
+        </div>
+       
+    </ion-content>
+</ion-view>

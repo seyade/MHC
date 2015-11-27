@@ -1,0 +1,611 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+.slide-ios,
+.slide-left-right-ios7,
+.slide-right-left-ios7.reverse {
+  > .ng-enter, 
+  &.ng-enter,
+  > .ng-leave, 
+  &.ng-leave {
+    right: -1px;
+    left: -1px;
+  }
+  > .ng-enter, 
+  &.ng-enter {
+    /* NEW content placed far RIGHT BEFORE it slides IN from the RIGHT */
+    z-index: 2;
+  }
+
+}
+
+.slide-ios.reverse,
+.slide-left-right-ios7.reverse,
+.slide-right-left-ios7 {
+  > .ng-enter, 
+  &.ng-enter, 
+  > .ng-leave, 
+  &.ng-leave {
+    right: -1px;    
+    left: -1px;
+  }
+  > .ng-enter, 
+  &.ng-enter {
+    /* NEW content placed far LEFT BEFORE it slides IN from the LEFT */
+    z-index: 1;
+  }
+
+}
+
+[nav-view-transition][nav-view-direction] {
+	background-color: transparent;
+}
+
+// App styling
+.app-content {
+  text-align: center;
+}
+
+.app-form {
+  height: 25rem;
+}
+
+.app-btn {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.bar-header {
+  //margin-top: 20px;
+  &.bar-stable {
+    .title {
+      color: #fff;
+    }
+  }
+}
+
+.menu-content {
+  box-shadow: -1px 0px 25px rgba(0, 0, 0, 0.3), 1px 0px 25px rgba(0, 0, 0, 0.3);
+}
+
+.menu-left {
+  background: #841e57;
+  font-family: 'Poiret One';
+
+  .bar-header {
+    background: #841e57;
+    height: 72px !important;
+    padding-bottom: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+
+    h1 {
+      font-family: 'Poiret One';
+      font-weight: bold;
+      text-align: right;
+      font-size: 1.4rem;
+    }
+  }
+
+  .app-sidemenu-view-list {
+    margin-top: 7px;
+  }
+
+  .item {
+    border: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .item:nth-child(1) {
+    .item-content {
+      background: #fc9768;
+      color: #fff;
+    }
+  }
+
+  .item:nth-child(2) {
+    .item-content {
+      background: #841e57;
+      color: #fff;
+    }
+  }
+
+  .item:nth-child(3)  {
+    .item-content {
+      background: #db5758;
+      color: #fff;
+    }
+  }
+
+  .item:nth-child(4)  {
+    .item-content {
+      background: #e38587;
+      color: #fff;
+    }
+  }
+}
+
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, 
+[nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+  background: #841e57;
+  .button {
+    color: #fff;
+  }
+
+  .title {
+    color: #fff;
+    font-family: 'Poiret One';
+    font-weight: bold;
+    font-size: 1.15rem;
+  }
+}
+
+.app-view {
+  font-family: 'Poiret One';
+  background: #841e57;
+  color: #fff;
+  text-align: center;
+
+  h1, h2 {
+    color: #fff;
+    font-family: 'Poiret One';
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 48px;
+    padding: 0 66px;
+  }
+
+  .scroll {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .app-home-content {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .btn-enter {
+    font-family: 'Poiret One';
+    font-weight: bold;
+    font-size: 1.3rem;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 10rem;
+    text-align: center;
+    &:hover {
+      color: #efefef;
+    }
+  }
+}
+
+.app-view-header {
+  //margin-top: 20px;
+}
+
+.app-list-container {
+  //padding-top: 35px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.app-menu-list {
+  .item {
+    //height: 9rem;
+    padding: 20% 0;
+    border: none;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.3rem;
+
+    .icon {
+        left: 18px;
+        top: auto;
+        bottom: 12px;
+        height: auto;
+    }
+
+    .item-text {
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+    }
+
+    &.item-intro {
+      background: #fc9768;
+    }
+
+    &.item-quiz {
+      background: #841e57;
+      font-size: 1.6rem;
+    }
+
+    &.item-season {
+      background: #db5758;
+    }
+
+    &.item-disclaimer {
+      background: #e38587;
+    }
+  }
+}
+
+.app-view-quiz {
+
+  .app-quiz-header {
+    background: #841e57;
+    color: #fff;
+    margin-bottom: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+
+    h1 {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    .ion-navicon {
+      color: #fff;
+    }
+
+    .ion-ios-help-outline {
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+  }
+  
+  .app-quiz-answers {
+    padding-top: 64px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .item-radio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+
+    .item-content {
+      padding-right: 0;
+    }
+  }
+
+  .app-quiz-btn, 
+  .app-btn-process {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}
+
+.app-view-quiz-jewel {
+  .item-radio {
+    &:nth-child(1) {
+      .item-content {
+        background: #fdc053;
+      }
+    }
+
+    &:nth-child(2) {
+      .item-content {
+        background: #c0c0c0;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.app-view-quiz-vein {
+  .item-radio {
+    &:nth-child(1) {
+      .item-content {
+        background: #46b19b;
+        color: #fff;
+      }
+    }
+
+    &:nth-child(2) {
+      .item-content {
+        background: #798bca;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.app-view-quiz-eye {
+  
+  .item-radio {
+    &:nth-child(1) {
+      .item-content {
+        background: #222;
+        color: #fff;
+      }
+      .ion-checkmark {
+        color: #fff;
+      }
+    }
+
+    &:nth-child(2) {
+      .item-content {
+        background: #776536;
+        color: #fff;
+      }
+    }
+
+    &:nth-child(3) {
+      .item-content {
+        background: #94703D;
+        color: #fff;
+      }
+    }
+
+    &:nth-child(4) {
+      .item-content {
+        background: #46b19b;
+        color: #fff;
+      }
+    }
+
+    &:nth-child(5) {
+      .item-content {
+        background: #798bca;
+        color: #fff;
+      }
+    }
+
+    &:nth-child(6) {
+      .item-content {
+        background: #c0c0c0;
+        color: #fff;
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      .ion-checkmark {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.app-view-quiz-hair {
+  
+  .item-radio {
+    &:nth-child(1) {
+      .item-content {
+        background: #222;
+        color: #fff;
+      }
+      .ion-checkmark {
+        color: #fff;
+      }
+    }
+
+    &:nth-child(2) {
+      .item-content {
+        background: #94703D;
+        color: #fff;
+      }
+    }
+
+    &:nth-child(3) {
+      .item-content {
+        background: #b88f54;
+        color: #fff;
+      }
+    }
+
+    &:nth-child(4) {
+      .item-content {
+        background: #db5758;
+        color: #fff;
+      }
+    }
+
+    &:nth-child(5) {
+      .item-content {
+        background: #b89778;
+        color: #fff;
+      }
+    }
+
+    &:nth-child(6) {
+      .item-content {
+        background: #e6cea8;
+        color: #94703D;
+      }
+
+      .ion-checkmark {
+        color: #94703D;
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      .ion-checkmark {
+        color: #fff;
+      }
+    }
+  }
+  
+
+  .app-quiz-btn-container {
+
+    .app-quiz-process {
+      background: none;
+      border: none;
+      font-size: 2.5rem;
+      font-weight: bold;
+      font-family: 'Poiret One';
+    }
+
+    .ion-ios-arrow-thin-right {
+      &:before {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.app-view-result {
+  .app-quiz-header {
+    background: #841e57;
+    color: #fff;
+
+    h1 {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    .ion-navicon {
+      color: #fff;
+    }
+
+    .ion-ios-help-outline {
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+  }
+
+  .app-result-container {
+    padding-top: 84px;
+    .app-result-season {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+
+    .app-result-palette {
+      font-size: 1.5rem;
+    }
+  }
+
+  .app-browse-btn {
+    margin: 0;
+    font-family: 'Poiret One';
+    font-weight: bold;
+    font-size: 1.3rem;
+    background: #47b29b;
+    border: none;
+    color: #fff;
+    text-align: center;
+    &:hover {
+      color: #efefef;
+    }
+  }
+  
+  .app-delete-result-btn {
+    margin: 0;
+    font-family: 'Poiret One';
+    font-weight: bold;
+    font-size: 1.3rem;
+    background: #e46c57;
+    border: none;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+
+    &:hover {
+      color: #efefef;
+    }
+    &:before {
+      margin-right: 15px;
+    }
+  }
+}
+
+.app-view-colour-slides {
+
+  .bar-header {
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .slider {
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+  }
+
+  .colour-slide {
+    height: 500px;
+    color: #fff;
+  }
+
+  .colour-slide-name {
+    position: absolute;
+    bottom: 20%;
+    text-align: center;
+    width: 100%;
+    padding: 24px 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .colour-slide-hex {
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+    width: 100%;
+    padding: 24px 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .button {
+    margin: 0;
+    border: none;
+  }
+  
+  .app-btn-back-result,
+  .app-btn-menu {
+    font-family: 'Poiret One';
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .app-btn-back-result {
+    background: #b0606d;
+  }
+
+  .app-btn-menu {
+    background: #673552;
+  }
+}

@@ -1,0 +1,22 @@
+<ion-view view-title="1." class="app-view app-view-quiz app-view-quiz-jewel">
+    <ion-content class="app-content">
+
+        <div class="bar-stable bar bar-header app-quiz-header">
+          <h1 class="h1 title title-center header-item">What is your jewel tone?</h1>
+        </div>
+        
+        <div class="app-quiz-answers list">
+            <ion-radio ng-repeat="answer in answers"
+                   ng-value="answer.tone"
+                   ng-model="formData.tone">
+              {{ answer.tone }}
+            </ion-radio>
+        </div>
+        
+        <div class="app-quiz-btn-container">
+          <button class="button button-calm ion-ios-arrow-thin-left app-quiz-btn" ui-sref="app.main-menu"></button>
+          <button class="button button-calm ion-ios-arrow-thin-right app-quiz-btn" ui-sref="app.form.vein-colour"></button>
+        </div>
+      
+    </ion-content>
+</ion-view>

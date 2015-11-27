@@ -1,0 +1,39 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <!-- <ion-nav-back-button>
+      </ion-nav-back-button> -->
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" class="app-sidemenu-view">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">My Hijab Colours</h1>
+    </ion-header-bar>
+    <ion-content class="app-sidemenu-view-list">
+      <ion-list>
+        <!-- <ion-item menu-close ng-click="login()">
+          Login
+        </ion-item> -->
+        <ion-item menu-close href="#/app/intro">
+          Intro
+        </ion-item>
+        <ion-item menu-close href="#/app/form/jewellery-tone">
+          Find Your Colour
+        </ion-item>
+        <ion-item menu-close href="#/app/seasons">
+          Seasons
+        </ion-item>
+        <ion-item menu-close href="#/app/disclaimer">
+          Disclaimer
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

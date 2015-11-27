@@ -1,0 +1,22 @@
+<ion-view view-title="4." class="app-view app-view-quiz app-view-quiz-hair">
+    <ion-content class="app-content">
+
+        <div class="bar bar-header app-quiz-header">
+          <h1 class="h1 title">What is your hair colour?</h1>
+        </div>
+		
+		<div class="app-quiz-answers list">
+			<ion-radio ng-repeat="answer in answers"
+                   ng-value="answer.hair"
+                   ng-model="formData.hair">
+	          {{ answer.hair }}
+	        </ion-radio>
+		</div>
+
+		<div class="app-quiz-btn-container">
+          <!-- <button class="button button-calm" type="submit">Process</button> -->
+          <button class="button button-calm ion-ios-arrow-thin-right app-quiz-process"  type="submit">Process</button>
+        </div>
+
+    </ion-content>
+</ion-view>

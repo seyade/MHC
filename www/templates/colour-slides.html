@@ -1,0 +1,14 @@
+<ion-view view-title="Your Season Colours" class="app-view app-view-colour-slides">
+  <ion-content>
+    <ion-slide-box show-pager="false">
+	  <ion-slide ng-repeat="colour in colours">
+	    <div class="colour-slide" style="background:{{colour.hex}};">
+	    	<div class="colour-slide-name">{{colour.name}}</div>
+	    	<div class="colour-slide-hex">{{colour.hex}}</div>
+	    </div>
+	  </ion-slide>
+	</ion-slide-box>
+	<button class="app-btn-back-result button button-energized button-full" ui-sref="app.result">Back to result</button>
+	<button class="app-btn-menu button button-calm button-full" ui-sref="app.main-menu">Menu</button>
+  </ion-content>
+</ion-view>
